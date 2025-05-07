@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="animation.css" />
+    <title>Animation</title>
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+    <!-- Header Page -->
+    <header class="header">
+        <a href="/Home/home.html"><img src="/images/kalztech_logo.png" alt="Headerlogo" class="logo" /></a>
+        <ul class="navbar">
+            <li><a href="/Home/home.html">
+                    <p>Home</p>
+                </a></li>
+            <li>
+                <a href="/Hover Effect/hoverEffect.html">
+                    <p>Hover Effects</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="/Transition/transition.html">
+                    <p>Transition</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="/Animation/animation.html">
+                    <p>Animation</p>
+                </a>
+            </li>
+
+        </ul>
+        <button class="login-button">
+            <span> Contact Us</span>
+            <!-- <img src="/images/login.png" class="login" /> -->
+        </button>
+    </header>
+
+    <!-- <h1 class="title">Motion Magic: The Art of Animation</h1> -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Motion Magic</h1>
+            <p class="hero-subtitle">The Art of Animation</p>
+            <div class="gradient-border"></div>
+        </div>
+    </section>
+
+    <div class="cardCollection">
+
+        <!-- Bounce -->
+        <div class="card reveal" style="--i:1;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Bounce</b></p>
+                <p>Bounces the element up and down.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="bounce">Play</button>
+            </div>
+        </div>
+
+        <!-- Flash -->
+        <div class="card reveal" style="--i: 2;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Flash</b></p>
+                <p>Quick flashes to grab attention.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="flash">Play</button>
+            </div>
+        </div>
+
+        <!-- Pulse -->
+        <div class="card reveal" style="--i: 3;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Pulse</b></p>
+                <p> Smooth pulsing like a heartbeat.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="pulse">Play</button>
+            </div>
+        </div>
+
+        <!-- Swing -->
+        <div class="card reveal" style="--i: 4;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Swing</b></p>
+                <p> Swings side to side like a pendulum.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="swing">Play</button>
+            </div>
+        </div>
+
+        <!-- Heaertbeat -->
+        <div class="card reveal" style="--i: 5;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Heartbeat</b></p>
+                <p>Strong pulsing like a heartbeat.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="heartbeat">Play</button>
+            </div>
+        </div>
+
+        <!-- Rubberband -->
+        <div class="card reveal" style="--i: 6;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Rubberband</b></p>
+                <p>Stretches and snaps like elastic.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="rubberband">Play</button>
+            </div>
+        </div>
+
+        <!-- Wooble -->
+        <div class="card reveal" style="--i: 7;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Wobble</b></p>
+                <p> Wobbles side to side with twist.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="wobble">Play</button>
+            </div>
+        </div>
+
+        <!-- Jello -->
+        <div class="card reveal" style="--i: 8;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Jello</b></p>
+                <p>Wobbly jello-like bounce using skew transforms.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="jello">Play</button>
+            </div>
+        </div>
+
+        <!-- Hinge -->
+        <div class="card reveal" style="--i: 9;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Hinge</b></p>
+                <p>Smoothly swings down like a door, then drops.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="hinge">Play</button>
+            </div>
+        </div>
+
+        <!-- jackInTheBox -->
+        <div class="card reveal" style="--i: 10;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Jack In The Box</b></p>
+                <p>Playfully pops in with spring and rotation.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="jackInTheBox">Play</button>
+            </div>
+        </div>
+
+        <!-- RollIn -->
+        <div class="card reveal" style="--i: 11;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Roll In</b></p>
+                <p>Smoothly rolls in while rotating and fading.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="rollIn">Play</button>
+            </div>
+        </div>
+
+        <!-- RollOut -->
+        <div class="card reveal" style="--i: 12;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Roll Out</b></p>
+                <p>Quickly rolls out with spin and fade.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="rollOut">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideInDown -->
+        <div class="card reveal" style="--i: 13;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b> Slide In Down</b></p>
+                <p>Slides smoothly from top to bottom with fade.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideInDown">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideInUp -->
+        <div class="card reveal" style="--i: 14;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b> Slide In Up</b></p>
+                <p>Slides smoothly from bottom to top with fade.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideInUp">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideInLeft -->
+        <div class="card reveal" style="--i: 15;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Slide In Left</b></p>
+                <p>Slides smoothly from left to right with fade.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideInLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideInRight -->
+        <div class="card reveal" style="--i: 16;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Slide In Right</b></p>
+                <p>Slides smoothly from right to left with fade.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideInRight">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideOutDown -->
+        <div class="card reveal" style="--i: 17;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b> Slide Out Down</b></p>
+                <p>Slides smoothly downward and fades out to bottom.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideOutDown">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideOutUp -->
+        <div class="card reveal" style="--i: 18;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b> Slide Out Up</b></p>
+                <p>Slides smoothly upward and fades out to top.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideOutUp">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideOutLeft -->
+        <div class="card reveal" style="--i: 19;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Slide Out Left</b></p>
+                <p>Slides smoothly leftward and fades out to left.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideOutLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- SlideOutRight -->
+        <div class="card reveal" style="--i: 20;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Slide Out Right</b></p>
+                <p>Slides smoothly rightward and fades out to right.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="slideOutRight">Play</button>
+            </div>
+        </div>
+
+        <!-- LightspeedInLeft -->
+        <div class="card reveal" style="--i: 21;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Lightspeed In Left</b></p>
+                <p>Skewed slide-in from left with fade effect.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="lightspeedInLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- LightspeedInRight -->
+        <div class="card reveal" style="--i:22;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Lightspeed In Right</b></p>
+                <p>Skewed slide-in from right with fade-in.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="lightspeedInRight">Play</button>
+            </div>
+        </div>
+
+        <!-- LightspeedOutLeft -->
+        <div class="card reveal" style="--i: 23;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Lightspeed Out Left</b></p>
+                <p>Skewed slide-out to left with fast fade out.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="lightspeedOutLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- LightSpeedOutRight -->
+        <div class="card reveal" style="--i: 24;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Lightspeed Out Right</b></p>
+                <p>Skewed slide-out to right with easy fade out.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="lightspeedOutRight">Play</button>
+            </div>
+        </div>
+
+        <!-- ShakeX -->
+        <div class="card reveal" style="--i: 25;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Shake X</b></p>
+                <p>Shakes left and right rapidly.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="shakeX">Play</button>
+            </div>
+        </div>
+
+        <!-- ShakeY -->
+        <div class="card reveal" style="--i: 26;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Shake Y</b></p>
+                <p>Shakes up and down vertically.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="bounce">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeIn -->
+        <div class="card reveal" style="--i: 27;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn</b></p>
+                <p>Smooth fade-in from invisible.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadein">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInUp -->
+        <div class="card reveal" style="--i: 28;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Up</b></p>
+                <p> Fades in while moving upward.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInUp">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInDown -->
+        <div class="card reveal" style="--i: 29;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Down</b></p>
+                <p> Fades in while moving downward.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInDown">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInLeft -->
+        <div class="card reveal" style="--i: 30;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Left</b></p>
+                <p>Fades in while sliding from left.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInRight -->
+        <div class="card reveal" style="--i: 31;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Right</b></p>
+                <p>Fades in while sliding from right.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInRight">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInTopLeft -->
+        <div class="card reveal" style="--i: 32;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Top Left</b></p>
+                <p>Fades in from top-left corner.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInTopLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInTopRight -->
+        <div class="card reveal" style="--i: 33;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Top Right</b></p>
+                <p>Fades in from top-right corner.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInTopRight">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInBottomLeft -->
+        <div class="card reveal" style="--i: 34;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Bottom Left</b></p>
+                <p>Fades in from bottom-left corner</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInBottomLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeInBottomRight -->
+        <div class="card reveal" style="--i: 35;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>FadeIn Bottom Right</b></p>
+                <p>Fades in from bottom-right corner</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeInBottomRight">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeOut -->
+        <div class="card reveal" style="--i: 36;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Fade Out</b></p>
+                <p>Fades out without movement.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeOut">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeOutUp -->
+        <div class="card reveal" style="--i: 37;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Fade Out Up</b></p>
+                <p>Fades out while moving up.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeOutUp">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeOutDown -->
+        <div class="card reveal" style="--i: 38;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Fade Out Down</b></p>
+                <p>Fades out while moving down.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeOutDown">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeOutLeft -->
+        <div class="card reveal" style="--i: 39;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Fade Out Left</b></p>
+                <p>Fades out while sliding left.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeOutLeft">Play</button>
+            </div>
+        </div>
+
+        <!-- FadeOutRight -->
+        <div class="card reveal" style="--i: 40;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Fade Out Right</b></p>
+                <p>Fades out while sliding right.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="fadeOutRight">Play</button>
+            </div>
+        </div>
+
+        <!-- Flip -->
+        <div class="card reveal" style="--i: 41;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Flip</b></p>
+                <p>Performs a smooth 180° 3D flip along the Y-axis.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="flip">Play</button>
+            </div>
+        </div>
+
+        <!-- FlipInX -->
+        <div class="card reveal" style="--i: 42;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Flip In X</b></p>
+                <p>Flips in vertically with 3D rotate and fade effect.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="flipInX">Play</button>
+            </div>
+        </div>
+
+        <!-- FlipInY -->
+        <div class="card reveal" style="--i: 43;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Flip In Y</b></p>
+                <p>Flips in from horizontal axis, giving rotating card effect.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="flipInY">Play</button>
+            </div>
+        </div>
+
+        <!-- FlipOutX -->
+        <div class="card reveal" style="--i: 44;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Flip Out X</b></p>
+                <p>Flips out vertically with fading, creating a vertical exit.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="flipOutX">Play</button>
+            </div>
+        </div>
+
+        <!-- FlipInY -->
+        <div class="card reveal" style="--i: 45;">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b>Flip Out Y</b></p>
+                <p>Flips out horizontally, spinning away with fade out.</p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="flipOutY">Play</button>
+            </div>
+        </div>
+
+
+
+
+        <!-- Sample CARD -->
+        <!-- <div class="card">
+            <div class="firstcard">
+                <div class="childcard">
+                    <img src="/catcus.jpg" alt="" width="100px" />
+                </div>
+            </div>
+            <b>
+                <hr />
+            </b>
+            <div class="detailscard">
+                <p><b></b></p>
+                <p></p>
+            </div>
+            <div class="btncard">
+                <button class="btn-play" data-animation="">Play</button>
+            </div>
+        </div> -->
+
+
+    </div>
+
+    <!-- Footer page  -->
+    <footer>
+        <div class="last-div">
+            <div class="rights">&copy; 2025 All rights Reserved</div>
+            <div class="block">
+                <li>Terms</li>
+                <li>Privacy</li>
+                <li>Cookies</li>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-meta"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
