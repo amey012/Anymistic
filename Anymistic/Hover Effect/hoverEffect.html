@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="hoverEffect.css" />
+  <title>Hover Effect</title>
+</head>
+
+<body>
+
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Header Page -->
+  <header class="header">
+    <a href="/Home/home.html"><img src="/images/kalztech_logo.png" alt="Headerlogo" class="logo" /></a>
+    <ul class="navbar">
+      <li>
+        <p><a href="/Home/home.html">Home</a></p>
+      </li>
+      <li>
+        <p><a href="/Hover Effect/hoverEffect.html">Hover Effect</a></p>
+      </li>
+      <li>
+        <p><a href="/Transition/transition.html">Transition</a></p>
+      </li>
+      <li>
+        <p><a href="/Animation/animation.html">Animations</a></p>
+      </li>
+    </ul>
+    <button class="login-button">
+      <span> Contact Us</span>
+      <!-- <img src="/images/login.png" class="login" /> -->
+    </button>
+  </header>
+
+  <h1 class="title fade-in">Hovercraft: Effects on touch</h1>
+  <div class="cardCollection">
+
+    <div class="card hover-bg reveal" style="--i:1;">
+      <div class="firstcard ">
+        <div class="childcard ">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Background Color</b></p>
+        <p> Changes color on hover</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:2;">
+      <div class="firstcard">
+        <div class="childcard hover-scale">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Scale</b></p>
+        <p> A transformation that resizes an element on the 2D plane.</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:3;">
+      <div class="firstcard">
+        <div class="childcard hover-shadow">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Shadow </b></p>
+        <p>Applies Shadow to element or text</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:4;">
+      <div class="firstcard">
+        <div class="childcard hover-opacity">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+      <div class="detailscard">
+        <p><b>Opacity</b></p>
+        <p>The opacity property specifies the transparency of an element.</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:5;">
+      <div class="firstcard">
+        <div class="childcard hover-rotate">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Rotate</b></p>
+        <p>Rotates an element clockwise or anti-clockwise.</p>
+      </div>
+    </div>
+
+    <div class="card hover-gradient reveal" style="--i:6;">
+      <div class="firstcard">
+        <div class="childcard ">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Gradient</b></p>
+        <p>Display smooth transitions between two or more specified colors</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:7;">
+      <div class="firstcard">
+        <div class="childcard hover-blur">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Blur</b></p>
+        <p>adds a soft, blurry effect to an element, making it look out of focus.</p>
+      </div>
+    </div>
+
+    <div class="card hover-border reveal" style="--i:8;">
+      <div class="firstcard">
+        <div class="childcard ">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Border</b></p>
+        <p>is used to add a line around an element, like a box around a button, image</p>
+      </div>
+    </div>
+
+    <div class="card hover-outline reveal" style="--i:9;">
+      <div class="firstcard">
+        <div class="childcard ">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Outline</b></p>
+        <p>Adds a line around an element, outside of its border.</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:10;">
+      <div class="firstcard">
+        <div class="childcard hover-slide-right">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Slide Right</b></p>
+        <p>moving an element on right side</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:11;">
+      <div class="firstcard">
+        <div class="childcard ">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard hover-text-shadow">
+        <p><b>Text Color</b></p>
+        <p>moving an element on right side</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:12;">
+      <div class="firstcard">
+        <div class="childcard hover-slide-up">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Slide Up</b></p>
+        <p>moving an element upward (toward the top)</p>
+      </div>
+    </div>
+
+
+    <div class="card reveal" style="--i:13;">
+      <div class="firstcard">
+        <div class="childcard hover-skew">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Skew</b></p>
+        <p>Tilt an element along the X and Y axis, create a slanted effect.</p>
+      </div>
+    </div>
+
+    <div class="card hover-border-radius reveal" style="--i:14;">
+      <div class="firstcard">
+        <div class="childcard">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Rounded Corners</b></p>
+        <p>It controls the curve of the element’s corners.</p>
+      </div>
+    </div>
+
+    <div class="card hover-hologram reveal" style="--i:15;">
+      <div class="firstcard">
+        <div class="childcard">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Hologram</b></p>
+        <p>created by combine multicolor gradients, transparency, blur, glow shadows.
+        </p>
+      </div>
+    </div>
+    <!-- Flip  -->
+    <div class="card reveal" style="--i:16;">
+      <div class="flip-inner">
+        <!-- Front side -->
+        <div class="flip-front">
+          <div class="firstcard">
+            <div class="childcard">
+              <img src="/catcus.jpg" alt="Cactus Image" />
+            </div>
+          </div>
+          <div class="detailscard">
+            <p><b>Flip</b></p>
+          </div>
+        </div>
+
+        <!-- Back side -->
+        <div class="flip-back">
+          <p><b>Flip</b></p>
+          <p>Flips the element along the vertical axis (like flipping a card).</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card reveal" style="--i:17;">
+      <div class="firstcard">
+        <div class="childcard hover-brightness">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Brightness</b></p>
+        <p>It is used to adjust the lightness or darkness of an element.</p>
+      </div>
+    </div>
+    <div class="card  hover-glow reveal" style="--i:18;">
+      <div class="firstcard">
+        <div class="childcard">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Glow</b></p>
+        <p> create a glowing effect using the box-shadow properties</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:19;">
+      <div class="firstcard">
+        <div class="childcard hover-invert">
+          <img src="/catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Invert</b></p>
+        <p>Reverses the colors of an element, essentially flipping the color values.</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:20;">
+      <div class="flip-inners flip-ups">
+        <!-- Front side -->
+        <div class="flip-fronts">
+          <div class="firstcard">
+            <div class="childcard">
+              <img src="/catcus.jpg" alt="Cactus Image" />
+            </div>
+          </div>
+          <div class="detailscards">
+            <p><b>Flip</b></p>
+          </div>
+        </div>
+
+        <!-- Back side -->
+        <div class="flip-backs">
+          <p><b>Flip</b></p>
+          <p>Flips the element along the <b>horizontal</b> axis (flips upward).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:21;">
+      <div class="firstcard tilt-card">
+        <div class="childcard hover-tilt">
+          <img src="../catcus.jpg" alt="" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Tilt</b></p>
+        <p>This card tilts on hover!</p>
+      </div>
+    </div>
+
+    <div class="card ripple-card reveal" style="--i:22;">
+      <span class="ripple"></span>
+      <div class="firstcard">
+        <div class="childcard">
+          <img src="../catcus.jpg" alt="Cactus" width="100px" />
+        </div>
+      </div>
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Ripple</b></p>
+        <p>This card ripples on hover!</p>
+      </div>
+    </div>
+
+    <div class="card heartbeat-card reveal" style="--i:23;">
+      <div class="firstcard">
+        <div class="childcard hover-heartbeat">
+          <img src="../catcus.jpg" alt="Cactus" width="100px" />
+        </div>
+      </div>
+
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscard">
+        <p><b>Heartbeat</b></p>
+        <p>This card pulses like a heartbeat!</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:24;">
+      <div class="firstcard">
+        <div class="childcard hover-scale">
+          <img src="../catcus.jpg" alt="Cactus" width="100px" />
+        </div>
+      </div>
+
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscards">
+        <p><b> Slide-Up Reveal on Hover</b></p>
+        <p>A slide will open with text into it.</p>
+      </div>
+
+      <!-- Hidden sliding content -->
+      <div class="slide-hidden">
+        <p>Extra info revealed on hover!</p>
+      </div>
+    </div>
+
+    <div class="card reveal" style="--i:25;">
+      <div class="firstcard">
+        <div class="childcard hover-scale">
+          <img src="../catcus.jpg" alt="Cactus" width="100px" />
+        </div>
+      </div>
+
+      <b>
+        <hr />
+      </b>
+
+      <div class="detailscards">
+        <p><b>Lift with Shadow</b></p>
+        <p>Hover to see the card lift with a subtle shadow for depth.</p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+<!-- Footer page  -->
+<footer>
+  <div class="last-div">
+    <div class="rights">&copy; 2025 All rights Reserved</div>
+    <div class="block">
+      <li>Terms</li>
+      <li>Privacy</li>
+      <li>Cookies</li>
+    </div>
+    <div class="icons">
+      <i class="fa-brands fa-meta"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+    </div>
+  </div>
+  </div>
+  </div>
+</footer>
+
+<script src="hovereffect.js"></script>
+</body>
+
+</html>

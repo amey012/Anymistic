@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  line-height: 1.6;
+}
+
+:root {
+  --text-color: #003ae8;
+  --main-color: #fcd363;
+  --bg-dark: #003ea8;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 50px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  color: var(--text-color);
+}
+
+.navbar li a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.navbar li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0%;
+  background-color: var(--text-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.login-button {
+  background: var(--main-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-button:hover {
+  background: #ffd700;
+}
+
+.login {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.fancy-text {
+  position: absolute;
+  font-size: 610px;
+  font-weight: 600;
+  color: #ffde59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 1.1;
+  transition: all 0.8s ease-out;
+  z-index: -1;
+  transform: scale(1.12);
+  transform: translateY(-15px);
+  letter-spacing: -40px;
+  overflow: hidden;
+}
+
+body.loaded .fancy-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero h1, .hero h2 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-weight: 700;
+  font-size: 50px;
+  color: #000;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cube {
+  padding: 15px 30px;
+  background: var(--bg-dark);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  animation: bounce 2s infinite alternate;
+}
+
+.cube:hover {
+  transform: translateY(-8px) scale(1.05) rotate(-1deg);
+  background: var(--main-color);
+  color: var(--text-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+.article h1{
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+
+/* Bounce animation */
+@keyframes bounce {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+/* Articles */
+.article {
+  padding: 80px 50px;
+}
+
+.article-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.article-card {
+  width: 250px;
+  height: 300px;
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.article-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: var(--main-color);
+}
+
+.card-content{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.article-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.title, .description {
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  color: white;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-us {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 30px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.last-div {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons i {
+  background: var(--main-color);
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--text-color);
+}
+
+
+/* SlideBothways */
+@keyframes slideBothways {
+
+  0% {
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(50px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+
+}
+
+/* Fade Animations */
+.fade-in, .fade-up {
+  opacity: 0;
+  animation-fill-mode: forwards;
+ 
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1.5s ease alternate ;
+}
+
+.fade-inn{
+  animation: slideBothways 4s infinite ease;
+}
+
+.fade-in:hover{
+  animation: slideBothWays 1.5s ease alternate ;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 1s;
+}
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up.delay-2 {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Idea 
+https://codepen.io/akm2/pen/AGgarW
+
+*/
+
+#particleCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(0.2px);
+}
+
+.header, .hero, .article, footer {
+  position: relative;
+  z-index: 1;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(0.2px);
+}
+
+
+
+.sticky-title-container {
+  position: relative;
+  height: 20vh; /* Maintain 20document flow */
+  z-index: 1;
+}
+
+.sticky-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8rem;
+  color: #FFD700;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.content-section {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+}
