@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Background Color",
+    "desc": "Changes background color on hover",
+    "key": "hover-bg"
+  },
+  {
+    "name": "Scale",
+    "desc": "Element scales up on hover",
+    "key": "hover-scale"
+  },
+  {
+    "name": "Shadow",
+    "desc": "Applies shadow to element or text on hover",
+    "key": "hover-shadow"
+  },
+  {
+    "name": "Opacity",
+    "desc": "Adjusts transparency of the element on hover",
+    "key": "hover-opacity"
+  },
+  {
+    "name": "Rotate",
+    "desc": "Element rotates on hover",
+    "key": "hover-rotate"
+  },
+  {
+    "name": "Gradient",
+    "desc": "Applies gradient background on hover",
+    "key": "hover-gradient"
+  },
+  {
+    "name": "Blur",
+    "desc": "Applies blur effect to the element on hover",
+    "key": "hover-blur"
+  },
+  {
+    "name": "Border",
+    "desc": "Adds a border to the element on hover",
+    "key": "hover-border"
+  },
+  {
+    "name": "Outline",
+    "desc": "Adds an outline around the element on hover",
+    "key": "hover-outline"
+  },
+  {
+    "name": "Slide Right",
+    "desc": "Element slides to the right on hover",
+    "key": "hover-slide-right"
+  },
+  {
+    "name": "Text Shadow",
+    "desc": "Applies shadow to text on hover",
+    "key": "hover-text-shadow"
+  },
+  {
+    "name": "Slide Up",
+    "desc": "Element slides upward on hover",
+    "key": "hover-slide-up"
+  },
+  {
+    "name": "Skew",
+    "desc": "Skews the element along X and Y axes on hover",
+    "key": "hover-skew"
+  },
+  {
+    "name": "Border Radius",
+    "desc": "Rounds the corners of the element on hover",
+    "key": "hover-border-radius"
+  },
+  {
+    "name": "Hologram",
+    "desc": "Applies multicolor holographic style on hover",
+    "key": "hover-hologram"
+  },
+  {
+    "name": "Flip (Vertical)",
+    "desc": "Flips the card vertically on hover",
+    "key": "flip-inner"
+  },
+  {
+    "name": "Brightness",
+    "desc": "Increases brightness of element on hover",
+    "key": "hover-brightness"
+  },
+  {
+    "name": "Glow",
+    "desc": "Applies glowing effect using shadows on hover",
+    "key": "hover-glow"
+  },
+  {
+    "name": "Invert",
+    "desc": "Inverts the color scheme of the element on hover",
+    "key": "hover-invert"
+  },
+  {
+    "name": "Flip (Horizontal)",
+    "desc": "Flips the card horizontally on hover",
+    "key": "flip-ups"
+  },
+  {
+    "name": "Tilt",
+    "desc": "Tilts the card based on cursor position on hover",
+    "key": "hover-tilt"
+  },
+  {
+    "name": "Ripple",
+    "desc": "Creates a ripple animation on hover",
+    "key": "hover-ripple"
+  },
+  {
+    "name": "Heartbeat",
+    "desc": "Card pulses like a heartbeat on hover",
+    "key": "hover-heartbeat"
+  },
+  {
+    "name": "Slide-Up Reveal",
+    "desc": "Reveals hidden slide content on hover",
+    "key": "hover-slide-hidden"
+  }
+]
