@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="hoverEffect.css" />
+    <title>Hover Effect</title>
+  </head>
+
+  <body>
+    <canvas id="particleCanvas"></canvas>
+    <!-- Header Page -->
+    <header class="header">
+      <a href="/index.html"
+        ><img src="/images/kalztech_logo.png" alt="Headerlogo" class="logo"
+      /></a>
+      <ul class="navbar">
+        <li>
+          <a href="/index.html">
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a href="/Hover Effect/hoverEffect.html">
+            <p>Hover Effects</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/Transition/transition.html">
+            <p>Transition</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/Animation/animation.html">
+            <p>Animation</p>
+          </a>
+        </li>
+      </ul>
+      <button class="login-button">
+        <span> Contact Us</span>
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Hover and Discover</h1>
+        <p class="hero-subtitle">Effects On Touch</p>
+        <button class="scrolldown" onclick="scrollDown()">Scroll Down</button>
+      </div>
+    </section>
+
+    <div class="cardCollection" id="cardContainer"></div>
+
+    <!-- Footer page  -->
+    <footer>
+      <div class="last-div">
+        <div class="rights">&copy; 2025 All rights Reserved</div>
+        <div class="block">
+          <li>Terms</li>
+          <li>Privacy</li>
+          <li>Cookies</li>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-meta"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="hoverEffect.js"></script>
+  </body>
+</html>

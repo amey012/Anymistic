@@ -1,24 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const playButtons = document.querySelectorAll(".btn-play");
+fetch("content.json")
+  .then((response) => response.json())
+  .then((hoverEffects) => {
+    const container = document.getElementById("cardContainer");
 
-  playButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".card");
-      const img = card.querySelector("img");
-      const animation = button.dataset.animation;
-
-      // Remove any previous animation class
-      img.classList.remove(animation);
-      void img.offsetWidth;
-      img.classList.add(animation);
-
-      // Remove
-      setTimeout(() => {
-        img.classList.remove(animation);
-      }, 2000);
+    hoverEffects.forEach((hover, index) => {
+      container.appendChild(createCardElement(hover, index));
     });
-  });
-});
+    setupScrollReveal();
+  })
+  .catch((error) => console.error("Error loading hover-effects:", error));
+
+// Card generator function
+function createCardElement(hover, index) {
+  const card = document.createElement("div");
+  card.className = `card ${hover.key}`;
+  card.style.setProperty("--i", index + 1);
+
+  card.innerHTML = `
+    <div class="firstcard">
+      <div class="childcard">
+        <img src="/catcus.jpg" alt="${hover.name} example" width="100px" />
+      </div>
+    </div>
+    <b><hr /></b>
+    <div class="detailscard">
+      <p><b>${hover.name}</b></p>
+      <p>${hover.desc}</p>
+    </div>
+  `;
+  return card;
+}
 
 // Background Animation
 const canvas = document.getElementById("particleCanvas");
@@ -28,7 +39,7 @@ let width = (canvas.width = window.innerWidth);
 let height = (canvas.height = window.innerHeight);
 
 const particles = [];
-const numParticles = 160;
+const numParticles = 130;
 
 let mouse = { x: null, y: null };
 
@@ -76,29 +87,12 @@ class Particle {
     }
   }
 
-  // draw() {
-  //   ctx.beginPath();
-  //   ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-  //   ctx.fillStyle = `rgba(255, 194, 0, ${this.opacity})`;
-  //   ctx.fill();
-  // }
-
-
-
   draw() {
-    // Create gradient
-    const gradient = ctx.createRadialGradient(
-        this.x, this.y, 0, 
-        this.x, this.y, this.size
-    );
-    gradient.addColorStop(0, `rgba(255, 194, 0, ${this.opacity})`);
-    gradient.addColorStop(1, `rgba(255, 100, 0, 0)`);
-
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = gradient;
+    ctx.fillStyle = `rgba(255, 194, 0, ${this.opacity})`;
     ctx.fill();
-}
+  }
 }
 
 function initParticles() {
@@ -129,32 +123,36 @@ window.addEventListener("mousemove", (e) => {
 initParticles();
 animate();
 
-// Code for card animation effect
+// Code for card animation effect - Scroll Up and Down
 
-  const reveals = document.querySelectorAll('.reveal');
+function setupScrollReveal() {
+  const reveals = document.querySelectorAll(".reveal");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const el = entry.target;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
 
-      const rect = el.getBoundingClientRect();
-      const fullyOut = rect.bottom < 0 || rect.top > window.innerHeight;
+        const rect = el.getBoundingClientRect();
+        const fullyOut = rect.bottom < 0 || rect.top > window.innerHeight;
 
-      if (entry.isIntersecting) {
-        el.classList.add('show'); // Add animation
-      } else if (fullyOut) {
-        el.classList.remove('show'); // Remove only if completely gone
-      } else{
-        el.classList.remove('show'); 
-      }
-    });
-  }, {
-    threshold: 0.5, // ~30% visible
-    rootMargin: "0px 0px 0px 0px" // Optional buffer
+        if (entry.isIntersecting) {
+          el.classList.add("show"); // Add animation
+        }
+      });
+    },
+    {
+      threshold: 0.3, // ~30% visible
+      rootMargin: "0px 0px 0px 0px", // Optional buffer
+    }
+  );
+
+  reveals.forEach((el) => observer.observe(el));
+}
+
+function scrollDown() {
+  window.scrollBy({
+    top: window.innerHeight * 0.98,
+    behavior: "smooth",
   });
-
-  reveals.forEach(el => observer.observe(el));
-
-
-
-
+}

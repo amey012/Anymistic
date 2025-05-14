@@ -74,7 +74,7 @@
   gap: 20px;
   background-color: var(--main-color);
   height: 36px;
-  min-width: 140px;
+  width: 140px;
   border-radius: 18px;
 }
 .login {
@@ -83,8 +83,82 @@
   object-fit: contain;
 }
 
-/* Title */
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
 
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 5rem;
+  color: #003ae8;
+  text-shadow: 0 0 20px rgb(224, 248, 11);
+  animation: titleFloat 3s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: var(--main-color);
+  animation: subtitleFloat 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.scrolldown {
+  margin-top: 30px;
+  background-color: #ff0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@keyframes titleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes subtitleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.scroll-down {
+  padding: 8px 8px;
+  width: 95px;
+  height: 40px;
+  background: var(--text-color);
+  color: var(--article-title);
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+/* Title */
 .title {
   /* Hovercraft: Effects on Touch */
   text-align: center;
@@ -102,28 +176,34 @@
 /* Card */
 .cardCollection {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   width: 100%;
   justify-content: center;
   justify-items: center;
-  row-gap: 20px;
+  row-gap: 60px;
 }
 
 .card {
-  width: 200px;
+  width: 300px;
+  height: 100%;
   border: 1px solid #ccc;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   background-color: #fff;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 58, 232, 0.3);
 }
 
 .firstcard {
@@ -134,28 +214,27 @@
 }
 
 .childcard img {
-  width: 100px;
+  width: 150px;
   height: auto;
   border-radius: 10px;
 }
 
 .detailscard {
-  padding: 0px 15px;
   text-align: center;
   display: grid;
   justify-items: center;
-  height: 30%;
+  padding: 15px;
+  margin-top: 20px;
+  padding-bottom: 0px;
 }
 
 .detailscard p {
-  margin: 6px 0;
   font-family: Arial, sans-serif;
-  color: snow;
+  color: black;
+  padding-bottom: 10px;
 }
 
 .btncard {
-  padding-top: 5px;
-  padding-bottom: 5px;
   text-align: center;
   display: grid;
   justify-items: center;
@@ -172,10 +251,9 @@
 }
 
 /* Footer */
-
 footer {
   border-top: 2px solid black;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 .container {
   background-color: #ffffff;
@@ -229,7 +307,6 @@ footer {
 
 .icons i {
   color: var(--text-color);
-  /* background-color: var(--main-color); */
   left: 4px;
   right: 5px;
   cursor: pointer;
@@ -241,11 +318,118 @@ footer {
   align-items: center;
   justify-content: center;
 }
-/* 
-.icons i:hover {
-  color: #007bff;
-} */
-/* From static to stunning Learn the magic of motion. */
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .cardCollection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .logo {
+    height: 20px;
+    width: 70px;
+    display: block;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Even spacing */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar li {
+    list-style: none;
+  }
+
+  .navbar a {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .login-button {
+    padding: 0rem 0rem;
+    font-size: 0.6rem;
+    width: 80px;
+    height: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 5rem);
+  }
+
+  .scroll-down {
+    margin-top: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+    .childcard img{
+    width: 100px;
+  }
+
+  .cardCollection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detailscard p {
+    font-size: 14px;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rights,
+  .block,
+  .icons {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .block {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+}
 
 /* Animation */
 
@@ -626,7 +810,7 @@ footer {
 
 /* SlideOutUp */
 
-.slideOutUp{
+.slideOutUp {
   animation: slideOutUp 0.8s ease-in forwards;
 }
 
@@ -919,7 +1103,6 @@ footer {
   }
 }
 
-
 /* FadeInBottomLeft */
 
 .fadeInBottomLeft {
@@ -937,10 +1120,9 @@ footer {
   }
 }
 
-
 /* Fade In Bottom Right */
 
-.fadeInBottomRight{
+.fadeInBottomRight {
   animation: fadeInBottomRight 1s ease forwards;
 }
 
@@ -1021,7 +1203,6 @@ footer {
   }
 }
 
-
 /* FadeOutRight */
 
 .fadeOutRight {
@@ -1092,7 +1273,6 @@ footer {
   }
 }
 
-
 /* FlipOutX */
 
 .flipOutX {
@@ -1129,9 +1309,6 @@ footer {
   }
 }
 
-
-
-
 /* Background Animation */
 
 #particleCanvas {
@@ -1157,8 +1334,6 @@ canvas {
   filter: blur(0.2px);
 }
 
-
-
 /* code for animation card effect */
 .reveal {
   opacity: 0;
@@ -1169,83 +1344,4 @@ canvas {
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-
-.hero-content {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  font-size: 5rem;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(0, 58, 232, 0.8);
-  animation: titleFloat 3s ease-in-out infinite;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle {
-  font-size: 2rem;
-  color: var(--main-color);
-  animation: subtitleFloat 3s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-
-.gradient-border {
-  position: absolute;
-  width: 500px;
-  height: 300px;
-  background: linear-gradient(45deg, #003ae8, #fcd363);
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.5;
-  z-index: -1;
-  animation: gradientRotate 10s linear infinite;
-}
-
-@keyframes titleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-@keyframes subtitleFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-@keyframes gradientRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Enhanced Card Effects */
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-  
-}
-
-.card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 15px 30px rgba(0, 58, 232, 0.3);
-}
-
-/* Particle Enhancement */
-#particleCanvas {
-  background: linear-gradient(45deg, #000428, #004e92);
 }
